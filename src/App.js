@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import data from './data';
+import List from './List';
+
 import './App.css';
 
 function App() {
+  const [people, setPeople] = useState(data);
   return (
-    <div className="App">
-      <h2>
-        Reminder Project Setup
-      </h2>
-    </div>
+    <main>
+      <section>
+        <h3>{people.length} Birthdays Today</h3>
+      </section>
+    </main>
   );
 }
 
